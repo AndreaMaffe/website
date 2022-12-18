@@ -1,0 +1,11 @@
+Model Information:
+* title:	Weapons of Novice Hero
+* source:	https://sketchfab.com/3d-models/weapons-of-novice-hero-202d9ef9ec8e43c99d63ea18705b4051
+* author:	Maksim Batyrev (https://sketchfab.com/c3posw01)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Weapons of Novice Hero" (https://sketchfab.com/3d-models/weapons-of-novice-hero-202d9ef9ec8e43c99d63ea18705b4051) by Maksim Batyrev (https://sketchfab.com/c3posw01) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

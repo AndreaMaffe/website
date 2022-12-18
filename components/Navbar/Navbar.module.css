@@ -1,0 +1,35 @@
+.navbar {
+  position: absolute;
+  height: 80px;
+  width: 100%;;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.navbar > a:first-child {
+  font-family: 'BoldenVan';
+  letter-spacing: 2px;
+  font-size: x-large;
+}
+ 
+.navbar > ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* a:hover {
+  box-shadow: 0px 0px 50px 7px #F9FFA1, inset 0px 0px 10px 0px #FFFEA8; 
+} */
+
+.navbar a {
+  text-transform: uppercase;
+  padding: 0.5em;
+  width: 100px;
+  text-align: center;
+  border-radius: 8px;
+  letter-spacing: 1px;
+} 

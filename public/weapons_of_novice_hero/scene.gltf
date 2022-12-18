@@ -1,0 +1,446 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 3357,
+      "max": [
+        33.67645263671875,
+        9.554119110107422,
+        32.272178649902344
+      ],
+      "min": [
+        -30.932621002197266,
+        -16.830732345581055,
+        -29.856264114379883
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 40284,
+      "componentType": 5126,
+      "count": 3357,
+      "max": [
+        0.9968163967132568,
+        0.9990078210830688,
+        0.9983709454536438
+      ],
+      "min": [
+        -0.9994930624961853,
+        -0.9983351826667786,
+        -0.9999956488609314
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 3357,
+      "max": [
+        0.9973878264427185,
+        0.996518075466156,
+        0.9991106390953064,
+        1.0
+      ],
+      "min": [
+        -0.9987103939056396,
+        -0.9946669936180115,
+        -0.9976158738136292,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 3357,
+      "max": [
+        0.9899522662162781,
+        0.9895095825195313
+      ],
+      "min": [
+        0.009765535593032837,
+        0.009765662252902985
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 11892,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 80568,
+      "componentType": 5126,
+      "count": 1874,
+      "max": [
+        15.784595489501953,
+        12.934229850769043,
+        79.56077575683594
+      ],
+      "min": [
+        -28.010778427124023,
+        -30.61513900756836,
+        -20.297439575195313
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 103056,
+      "componentType": 5126,
+      "count": 1874,
+      "max": [
+        0.9990706443786621,
+        0.9956983923912048,
+        0.9986697435379028
+      ],
+      "min": [
+        -0.9924724698066711,
+        -0.9982701539993286,
+        -0.9973955750465393
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 53712,
+      "componentType": 5126,
+      "count": 1874,
+      "max": [
+        0.998285174369812,
+        0.9998865723609924,
+        0.9936282634735107,
+        1.0
+      ],
+      "min": [
+        -0.9994340538978577,
+        -0.9989211559295654,
+        -0.9967185854911804,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 26856,
+      "componentType": 5126,
+      "count": 1874,
+      "max": [
+        0.9898585081100464,
+        0.9892206788063049
+      ],
+      "min": [
+        0.009765565395355225,
+        0.009765625
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 47568,
+      "componentType": 5125,
+      "count": 6426,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Maksim Batyrev (https://sketchfab.com/c3posw01)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/weapons-of-novice-hero-202d9ef9ec8e43c99d63ea18705b4051",
+      "title": "Weapons of Novice Hero"
+    },
+    "generator": "Sketchfab-12.66.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 73272,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 41848,
+      "byteOffset": 73272,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 125544,
+      "byteOffset": 115120,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 83696,
+      "byteOffset": 240664,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 324360,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/M_NoviceHeroShield_baseColor.png"
+    },
+    {
+      "uri": "textures/M_NoviceHeroShield_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/M_NoviceHeroShield_normal.png"
+    },
+    {
+      "uri": "textures/M_NoviceHeroSword_baseColor.png"
+    },
+    {
+      "uri": "textures/M_NoviceHeroSword_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/M_NoviceHeroSword_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "M_NoviceHeroShield",
+      "normalTexture": {
+        "index": 2
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "M_NoviceHeroSword",
+      "normalTexture": {
+        "index": 5
+      },
+      "occlusionTexture": {
+        "index": 4
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "ShieldOfNoviceHero_M_NoviceHeroShield_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "SwordOfNoviceHero_M_NoviceHeroSword_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.017365574836731,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.259005371289493e-16,
+        -1.017365574836731,
+        0.0,
+        0.0,
+        1.017365574836731,
+        2.259005371289493e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "a1a20c43904d442fb8c7b6b36226849a.fbx"
+    },
+    {
+      "children": [
+        3,
+        5
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        60.62482833862305,
+        106.7601089477539,
+        -38.112762451171875,
+        1.0
+      ],
+      "name": "ShieldOfNoviceHero"
+    },
+    {
+      "mesh": 0,
+      "name": "ShieldOfNoviceHero_M_NoviceHeroShield_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        -16.414154052734375,
+        86.42693328857422,
+        -33.29277038574219,
+        1.0
+      ],
+      "name": "SwordOfNoviceHero"
+    },
+    {
+      "mesh": 1,
+      "name": "SwordOfNoviceHero_M_NoviceHeroSword_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}

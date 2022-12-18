@@ -1,0 +1,30 @@
+{
+  "name": "website",
+  "description": "Personal website for Andrea Mafessoni",
+  "repository": "https://github.com/AndreaMaffe/website.git",
+  "author": "Andrea Mafessoni <andreamafessoni@gmail.com>",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.40.0",
+    "@react-three/fiber": "^8.9.0",
+    "framer-motion": "^7.6.3",
+    "framer-motion-3d": "^7.6.19",
+    "next": "13.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "three": "^0.146.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.9",
+    "eslint": "^8.29.0",
+    "eslint-config-next": "^13.0.6",
+    "eslint-plugin-react": "^7.31.11"
+  }
+}
