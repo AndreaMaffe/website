@@ -14,24 +14,24 @@ const style = {
   pointerEvents: 'none'
 }
 
-const Cursor = () => {
+const DISTANCE_FROM_CURSOR = 20
+
+export default function CursorFollower() {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const controls = useAnimationControls()
 
   useEffect(() => {
+    const pop = () => controls.start({ scale: [2, 1] })
+    const followMouse = ({ clientX, clientY }) => setTimeout(() => setPosition({ x: clientX, y: clientY }), 400)
+
     const addEventListeners = () => {
-      document.addEventListener('mousemove',mMove)
-      document.addEventListener('mousedown', () => {
-        controls.start({ scale: [2, 1] })
-      })
+      document.addEventListener('mousemove', followMouse)
+      document.addEventListener('mousedown', pop)
     }
 
     const removeEventListeners = () => {
-      document.removeEventListener('mousemove', mMove)
-    }
-
-    const mMove = (el) => {
-      setPosition({ x: el.clientX, y: el.clientY })
+      document.removeEventListener('mousemove', followMouse)
+      document.removeEventListener('mousedown', pop)
     }
   
     addEventListeners()
@@ -43,11 +43,9 @@ const Cursor = () => {
       animate={controls}
       style={{
         ...style,
-        left: `${position.x + 15}px`,
-        top: `${position.y + 15}px`,
+        left: `${position.x + DISTANCE_FROM_CURSOR}px`,
+        top: `${position.y + DISTANCE_FROM_CURSOR}px`,
       }}
     />
   )
 }
-
-export default Cursor

@@ -4,7 +4,7 @@ import { useFrame } from '@react-three/fiber'
 
 export default function CursorLight() {
   const ref = useRef()
-  const cursorCoordinates = useCursorCoordinates()
+  const cursorCoordinates = useCursorCoordinates({ delay: 400 })
 
   useFrame(() => {
     ref.current.position.set(cursorCoordinates.current.x, cursorCoordinates.current.y, 2, -2)
