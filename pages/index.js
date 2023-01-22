@@ -2,40 +2,45 @@ import SpaceCanvas from '../components/SpaceCanvas'
 import { motion } from 'framer-motion'
 import styles from './Home.module.css'
 
-export default function Home() {
+const variants = {
+  centered: { x: 0, y: 0, transition: { duration: 2, ease: 'easeOut', type: 'spring', delay: 2 } },
+  right: { x: '100vw', transition: { duration: 2 } },
+  bottom: { y: '100vh',transition: { duration: 2 } },
+}
 
+export default function Home() {
   return (
     <div className={styles.container}>
       <SpaceCanvas />
       <h1>
         <motion.div 
           key='helloiam'
-          initial={{ y: '100vh' }} 
-          animate={{ y: 0 }}
-          exit={{ y: '100vh' }} 
-          transition={{ duration: 1, ease: 'easeOut', type: 'spring' }}
+          variants={variants}
+          initial='bottom' 
+          animate='centered'
+          exit='bottom'
         >
           Hello! I am
         </motion.div>
         <br/>
         <motion.div 
           key='andreamafessoni'  
-          initial={{ x: '100vw' }} 
-          exit={{ x: '100vw' }} 
-          animate={{ x: 0 }} 
-          transition={{ delay: 1, duration: 2, ease: 'easeOut', type: 'spring', bounce: 0.5 }}
-          style={{ fontFamily: 'BoldenVan', fontWeight: 400, letterSpacing: '2px', fontSize: 'calc(1.25em + 3vw)' }}
+          variants={variants}
+          initial='right'
+          exit='right'
+          animate='centered'
+          style={{ fontFamily: 'var(--codystar-font)', fontWeight: 400, letterSpacing: '2px', fontSize: 'calc(1.25em + 3vw)' }}
         >
           ANDREA MAFESSONI
         </motion.div>
         <br />
         <motion.div 
           key='softwareengineer'
-          initial={{ x: '100vw' }} 
-          exit={{ x: '100vw' }} 
-          animate={{ x: 0 }} 
-          transition={{ delay: 2, duration: 2, ease: 'easeOut', type: 'spring', bounce: 0.5 }}
-          style={{ color: '#1e67ff' }}
+          variants={variants}
+          initial='right'
+          exit='right'
+          animate='centered'
+          style={{ color: 'var(--yellow)' }}
         >
           Software Engineer & Front-End Developer 
         </motion.div>

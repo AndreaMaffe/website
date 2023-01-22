@@ -62,7 +62,9 @@ const AnimatedDraggableMesh = forwardRef(({
 
   return (
     <motion.mesh 
+      key={modelName}
       ref={ref} 
+      exit={{ x: '-100vw' }}
       position={initialPosition}
       onPointerEnter={() => setIsHovered(true)}
       onPointerOut={() => setIsHovered(false)}
