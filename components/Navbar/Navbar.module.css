@@ -21,9 +21,19 @@
   gap: 20px;
 }
 
-/* a:hover {
-  box-shadow: 0px 0px 50px 7px #F9FFA1, inset 0px 0px 10px 0px #FFFEA8; 
-} */
+.navbarLinkItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbarLinkItem:hover { color: var(--yellow) }
+
+.yellowDot {
+  background-color: var(--yellow);
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+}
 
 .navbar a {
   text-transform: uppercase;
