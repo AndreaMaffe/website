@@ -14,15 +14,17 @@ const style = {
   pointerEvents: 'none'
 }
 
-const DISTANCE_FROM_CURSOR = 20
+const DISTANCE_FROM_CURSOR = 30
 
 export default function CursorFollower() {
-  const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [position, setPosition] = useState({ x: -100, y: -100 })
   const controls = useAnimationControls()
 
   useEffect(() => {
     const pop = () => controls.start({ scale: [2, 1] })
-    const followMouse = ({ clientX, clientY }) => setTimeout(() => setPosition({ x: clientX, y: clientY }), 400)
+    const followMouse = ({ clientX, clientY }) => {
+      setPosition({ x: clientX, y: clientY })
+    }
 
     const addEventListeners = () => {
       document.addEventListener('mousemove', followMouse)
@@ -36,7 +38,7 @@ export default function CursorFollower() {
   
     addEventListeners()
     return () => removeEventListeners()
-  }, [])
+  }, [controls])
 
   return (
     <motion.div
