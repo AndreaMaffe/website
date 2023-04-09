@@ -29,8 +29,14 @@ export default function Asteroid ({
     if (ref.current.position.x > 10) {
       ref.current.position.x = -10
     }
-    if (ref.current.position.y > 10) {
-      ref.current.position.y = -10
+    if (ref.current.position.x < -10) {
+      ref.current.position.x = 10
+    }
+    if (ref.current.position.y > 6) {
+      ref.current.position.y = -6
+    }
+    if (ref.current.position.y < -6) {
+      ref.current.position.y = 6
     }
   }
 
