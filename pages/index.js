@@ -10,7 +10,7 @@ const variants = {
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <SpaceCanvas />
       <h1>
         <motion.div 
@@ -45,6 +45,6 @@ export default function Home() {
           Software Engineer & Front-End Developer 
         </motion.div>
       </h1>
-    </div>
+    </main>
   )
 }
