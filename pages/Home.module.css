@@ -2,6 +2,7 @@
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 1fr;
+  color: var(--white);
 }
 .container > h1 {
   grid-column: 2;
