@@ -10,7 +10,7 @@ const variants = {
 
 export default function Home() {
   return (
-    <main className={styles.container}>
+    <main className={styles.home}>
       <SpaceCanvas />
       <h1>
         <motion.div 
@@ -29,7 +29,7 @@ export default function Home() {
           initial='right'
           exit='right'
           animate='centered'
-          style={{ fontFamily: 'var(--codystar-font)', fontWeight: 400, letterSpacing: '2px', fontSize: 'calc(1.25em + 3vw)' }}
+          style={{ fontFamily: 'var(--montserrat-font)', fontWeight: 400, letterSpacing: '-1px', fontSize: 'calc(1.25em + 3vw)' }}
         >
           ANDREA MAFESSONI
         </motion.div>
