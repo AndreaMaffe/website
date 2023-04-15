@@ -19,16 +19,12 @@ export default function MyApp({ Component, pageProps, router }) {
           --quicksand-font: ${quicksand.style.fontFamily};
         }
       `}</style>
-      <div 
-        style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}
-      >
-        <Navbar />
-        <CursorFollower />
+      <Navbar />
+      <CursorFollower />
         
-        <AnimatePresence mode='wait'>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </div>
+      <AnimatePresence mode='wait'>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
     </>
   )
 }

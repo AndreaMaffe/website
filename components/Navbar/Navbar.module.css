@@ -1,12 +1,15 @@
 .navbar {
   position: absolute;
+  top: 0;
   height: 80px;
-  width: 100%;;
+  width: 100%;
+  background: transparent;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  font-family: var(--quicksand-font);
 }
 
 .navbar > a:first-child {
@@ -26,7 +29,6 @@
   flex-direction: column;
   align-items: center;
 }
-.navbarLinkItem:hover { color: var(--yellow) }
 
 .yellowDot {
   background-color: var(--yellow);
@@ -36,10 +38,10 @@
 }
 
 .navbar a {
-  text-transform: uppercase;
   padding: 0.5em;
   width: 100px;
   text-align: center;
   border-radius: 8px;
-  letter-spacing: 1px;
-} 
+  letter-spacing: 2px;
+}
+.navbar a:hover, .navbar a:focus { color: var(--yellow) }

@@ -1,6 +1,5 @@
 .home {
   display: grid;
-  height: 100%;
   grid-template-columns: 1fr 1fr;
 }
 .home > h1 {
