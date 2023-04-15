@@ -1,0 +1,22 @@
+.button {
+  display: flex;
+  align-items: center;
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+  border: none;
+  padding: 1em 2em;
+  font-family: var(--montserrat-font);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+}
+
+.button > span {
+  width: 1em;
+  height: 1em;
+}
+
+.button span svg {
+  width: 1em;
+  height: 1em;
+}
