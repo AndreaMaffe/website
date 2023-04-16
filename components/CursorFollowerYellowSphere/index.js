@@ -16,7 +16,7 @@ const style = {
 
 const DISTANCE_FROM_CURSOR = 30
 
-export default function CursorFollower() {
+export default function CursorFollowerYellowSphere () {
   const [position, setPosition] = useState({ x: -100, y: -100 })
   const controls = useAnimationControls()
 

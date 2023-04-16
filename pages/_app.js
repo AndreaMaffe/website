@@ -4,7 +4,7 @@ import { Montserrat, Quicksand } from '@next/font/google'
 import '../styles/globals.css'
 import '../styles/variables.css'
 
-import CursorFollower from '../components/CursorFollower'
+import CursorFollowerYellowSphere from '../components/CursorFollowerYellowSphere'
 import Navbar from '../components/Navbar'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
@@ -20,7 +20,7 @@ export default function MyApp({ Component, pageProps, router }) {
         }
       `}</style>
       <Navbar />
-      <CursorFollower />
+      <CursorFollowerYellowSphere />
         
       <AnimatePresence mode='wait'>
         <Component {...pageProps} key={router.route} />

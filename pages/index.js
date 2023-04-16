@@ -19,8 +19,9 @@ export default function Home() {
           initial='bottom' 
           animate='centered'
           exit='bottom'
+          style={{ fontFamily: 'var(--montserrat-font)', fontWeight: 400, letterSpacing: '4px', fontSize: 'calc(0.5em)' }}
         >
-          Hello! I am
+          HELLO! I AM
         </motion.div>
         <br/>
         <motion.div 
