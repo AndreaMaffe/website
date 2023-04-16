@@ -3,6 +3,8 @@ import { EnvelopeClosedIcon } from '@radix-ui/react-icons'
 
 import styles from './Contact.module.css'
 import Button from '../../components/Button'
+import Input from '../../components/Input'
+import Textarea from '../../components/Textarea'
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
@@ -24,23 +26,25 @@ export default function Contact() {
       <h1>Let&#39;s build something <span style={{ color: 'var(--yellow)' }}>together</span>.</h1>
 
       <form onSubmit={e => {e.preventDefault(); console.log(e)}}>
-        <input 
+        <Input 
           id='name'
           name='name'
           placeholder='Your name'
           type='text'
+          required
         />
-        <input 
+        <Input 
           id='email'
           name='email'
           placeholder='Your email'
           type='email'
+          required
         />
-        <textarea 
+        <Textarea 
           id='message' 
           name='email'
           placeholder='Your message'
-          rows={1}
+          required
         />
         <Button 
           icon={<EnvelopeClosedIcon />}

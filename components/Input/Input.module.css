@@ -1,0 +1,10 @@
+.input {
+  all: unset;
+  width: 30vw;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--white);
+}
+
+.input:focus {
+  border-color: var(--yellow);
+}

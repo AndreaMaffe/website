@@ -1,0 +1,25 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: max(20vh, 100px) 48px 0;
+  gap: 140px;
+}
+
+.contact > h1 {
+  font-size: min(1.125em + 2vw, 2em);
+  font-weight: 300;
+  text-align: center;
+}
+
+.contact form {
+  display: grid;
+  grid-gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1400px;
+}
+
+.contact button[type=submit] {
+  grid-column: 1 / span 2;
+  justify-self: center;
+}
