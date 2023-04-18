@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
+import { Vector3 } from 'three'
 import AnimatedDraggableMesh from '../../AnimatedDraggableMesh'
 import useScreenTo3DConversion from '../../../hooks/useScreenTo3DConversion'
 
@@ -20,6 +21,8 @@ export default function Rocket({
   const whileNotDragged = delta => {
     ref.current.position.x += delta
     ref.current.position.y += delta
+
+    ref.current.rotateOnAxis(new Vector3(1, 1, 0), Math.cos(delta) / 100)
 
     if (ref.current.position.x > 10) {
       ref.current.position.x = -5
