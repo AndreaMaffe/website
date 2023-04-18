@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { motion, useAnimationControls } from 'framer-motion'
+import React, { useEffect, useRef } from 'react'
+import { motion, useAnimationControls, useAnimationFrame } from 'framer-motion'
+import useCursorPositionRef from '../../hooks/useCursorPositionRef'
 
 // "extends": "next/core-web-vitals"
 
@@ -17,37 +18,38 @@ const style = {
 const DISTANCE_FROM_CURSOR = 30
 
 export default function CursorFollowerYellowSphere () {
-  const [position, setPosition] = useState({ x: -100, y: -100 })
+  const cursorPositionRef = useCursorPositionRef()
   const controls = useAnimationControls()
+  const ref = useRef(null)
 
   useEffect(() => {
     const pop = () => controls.start({ scale: [2, 1] })
-    const followMouse = ({ clientX, clientY }) => {
-      setPosition({ x: clientX, y: clientY })
-    }
 
     const addEventListeners = () => {
-      document.addEventListener('mousemove', followMouse)
       document.addEventListener('mousedown', pop)
     }
 
     const removeEventListeners = () => {
-      document.removeEventListener('mousemove', followMouse)
       document.removeEventListener('mousedown', pop)
     }
   
     addEventListeners()
     return () => removeEventListeners()
   }, [controls])
+  
+  useAnimationFrame(time => {
+    const RANDOM_OFFSET_X = Math.cos(time / 500) * 10
+    const RANDOM_OFFSET_Y = Math.cos(time / 300) * 10
+
+    ref.current.style.left = `${cursorPositionRef.current.x + DISTANCE_FROM_CURSOR + RANDOM_OFFSET_X}px` 
+    ref.current.style.top = `${cursorPositionRef.current.y + DISTANCE_FROM_CURSOR + RANDOM_OFFSET_Y}px`
+  })
 
   return (
     <motion.div
+      ref={ref}
       animate={controls}
-      style={{
-        ...style,
-        left: `${position.x + DISTANCE_FROM_CURSOR}px`,
-        top: `${position.y + DISTANCE_FROM_CURSOR}px`,
-      }}
+      style={style}
     />
   )
 }
