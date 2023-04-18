@@ -4,7 +4,7 @@
   height: 80px;
   width: 100%;
   background: transparent;
-  padding: 0 20px;
+  padding: 0 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +41,6 @@
   padding: 0.5em;
   width: 100px;
   text-align: center;
-  border-radius: 8px;
   letter-spacing: 2px;
 }
 .navbar a:hover, .navbar a:focus { color: var(--yellow) }

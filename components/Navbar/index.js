@@ -6,14 +6,12 @@ import styles from './Navbar.module.css'
 
 const links = [
   { label: 'about', href: '/about' },
-  { label: 'work', href: '/work' },
   { label: 'contact', href: '/contact' }
 ]
 
 const colorsByPathname = {
   '/': 'var(--white)',
   '/about': 'var(--white)',
-  '/work': 'var(--white)',
   '/contact': 'var(--white)'
 }
 
