@@ -1,10 +1,7 @@
 .textarea {
   all: unset;
   box-sizing: border-box;
-  width: 30vw;
   border-bottom: 1px solid var(--white);
-  grid-column: 1 / span 2;
-  width: 100%;
   resize: none;
   overflow: hidden;
   height: 2.5em;
