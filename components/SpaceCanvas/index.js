@@ -67,7 +67,7 @@ export default function SpaceCanvas() {
     <motion.div 
       key='space-canvas'
       exit={{ opacity: 0, transition: { duration: 3 } }}
-      style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: 'var(--blue)' }}>
+      style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: 'var(--dark-blue)' }}>
       {circleMarkers}
       {canvas}
     </motion.div>
