@@ -1,0 +1,71 @@
+.about {
+  height: 100%;
+  padding-top: 96px;
+  overflow-y: auto;
+}
+
+.about section {
+  max-width: 100ch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4em;
+  padding: 5em 4em;
+  margin: auto;
+}
+
+.about h1 {
+  max-width: 24ch;
+}
+
+.about h1, .about h2 {
+  font-weight: 400;
+}
+
+.sectionTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25em;
+}
+
+.sectionTextContainer > p {
+  max-width: 66ch;
+}
+.sectionTextContainer > button {
+  margin-top: 1em;
+}
+
+.photoYellowCircle {
+  position: relative;
+  flex-shrink: 0;
+  width: 250px;
+  height: 250px;
+  background: var(--yellow);
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.rocketYellowCircle {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  background: var(--yellow);
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .about section {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+  .sectionTextContainer {
+    align-items: center;
+  }
+  .sectionTextContainer > button {
+    margin-top: 2em;
+  }
+  .about section:first-child > div:nth-child(1) { order: 2 }
+  .about section:first-child > div:nth-child(2) { order: 1 }
+}
