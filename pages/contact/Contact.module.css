@@ -1,9 +1,9 @@
 .contact {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  padding: max(20vh, 100px) 48px;
-  gap: 8em;
+  padding: max(20vh, 100px) 48px 3em;
   overflow-y: auto;
 }
 
@@ -15,10 +15,9 @@
 
 .contact form {
   display: grid;
-  width: 66vw;
+  width: max(60vw, 300px);
   grid-gap: 3em;
   grid-template-columns: auto auto;
-  max-width: 800px;
 }
 
 .contact textarea {

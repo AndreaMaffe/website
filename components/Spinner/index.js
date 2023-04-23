@@ -2,8 +2,8 @@ import { motion } from 'framer-motion'
 
 const style = { 
   borderRadius: '50%',
-  border: '6px solid var(--white)', 
-  borderTop: '6px solid var(--yellow)',
+  border: '4px solid var(--white)', 
+  borderTop: '4px solid var(--yellow)',
 }
 
 export default function Spinner({ size }) {

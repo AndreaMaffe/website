@@ -7,6 +7,7 @@ import Input from '../../components/Input'
 import Textarea from '../../components/Textarea'
 import { useState } from 'react'
 import Spinner from '../../components/Spinner'
+import sendEmail from './sendEmail'
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
@@ -16,17 +17,31 @@ const variants = {
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false)
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false)
+  const [showErrorMessage, setShowErrorMessage] = useState(false)
 
   const onSubmit = e => {
-    setIsLoading(true)
     e.preventDefault() 
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
+    setIsLoading(true)
+
+    const formData = new FormData(e.target)
+    const name = formData.get('name')
+    const email = formData.get('email')
+    const message = formData.get('message')
+
+    sendEmail(name, email, message)
+      .then(() => setShowSuccessMessage(true))
+      .catch(() => setShowErrorMessage(true))
+      .finally(() => setIsLoading(false)) 
+  }
+
+  const clearMessages = () => {
+    if (showSuccessMessage) { setShowSuccessMessage(false) }
+    if (showErrorMessage) { setShowErrorMessage(false) }
   }
 
   const form = (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} onChange={clearMessages}>
       <Input 
         id='name'
         name='name'
@@ -43,14 +58,13 @@ export default function Contact() {
       />
       <Textarea 
         id='message' 
-        name='email'
+        name='message'
         placeholder='Your message'
         required
       />
       <Button 
         icon={<EnvelopeClosedIcon />}
         type='submit'
-        onClick={onSubmit}
       >
         Send
       </Button>
@@ -69,6 +83,9 @@ export default function Contact() {
     >
       <h1>Let&#39;s build something <span style={{ color: 'var(--yellow)' }}>together</span>.</h1>
       {isLoading ? <Spinner size='4em' /> : form}
+      {!showSuccessMessage && !showErrorMessage && <div style={{ height: '1em' }} />}
+      {showSuccessMessage && <p>Your email was sent <span style={{ color: 'var(--green)' }}>successfully</span>.</p>}
+      {showErrorMessage && <p>Something went <span style={{ color: 'var(--red)' }}>wrong</span>. Please try again later.</p>}
     </motion.main>
   )
 }
