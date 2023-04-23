@@ -5,14 +5,17 @@
 .home > h1 {
   grid-column: 2;
   align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   padding: 1em;
   min-width: 460px;
   max-width: 100vw;
   font-weight: 400;
 }
 
-@media only screen and (max-width: 460px) {
-  .container > h1 {
+@media only screen and (max-width: 768px) {
+  .home > h1 {
     align-self: flex-start;
     margin-top: 15vh;
   }

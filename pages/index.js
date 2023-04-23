@@ -19,11 +19,10 @@ export default function Home() {
           initial='bottom' 
           animate='centered'
           exit='bottom'
-          style={{ fontFamily: 'var(--montserrat-font)', fontWeight: 400, letterSpacing: '4px', fontSize: 'calc(0.5em)' }}
+          style={{ fontFamily: 'var(--montserrat-font)', fontWeight: 400, letterSpacing: '4px', fontSize: '1rem' }}
         >
           HELLO! I AM
         </motion.div>
-        <br/>
         <motion.div 
           key='andreamafessoni'  
           variants={variants}
@@ -34,14 +33,13 @@ export default function Home() {
         >
           ANDREA MAFESSONI
         </motion.div>
-        <br />
         <motion.div 
           key='softwareengineer'
           variants={variants}
           initial='right'
           exit='right'
           animate='centered'
-          style={{ color: 'var(--yellow)' }}
+          style={{ color: 'var(--yellow)', fontSize: '2rem' }}
         >
           Software Engineer & Front-End Developer 
         </motion.div>
