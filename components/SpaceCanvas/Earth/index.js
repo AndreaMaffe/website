@@ -25,7 +25,7 @@ export default function Earth() {
       initial={isMobile ? { y: -30 } : { x: -30 }} 
       animate={isMobile ? MOBILE_POSITION : DESKTOP_POSITION}
       exit={isMobile ? { y: -30, transition: { duration: 4 } } : { x: -50, transition: { duration: 4 } }}
-      transition={{ duration: 2, ease: 'easeOut', type: 'spring', bounce: 0.4 }}
+      transition={{ duration: 2, ease: 'easeOut', type: 'spring' }}
     >
       <primitive object={earth} scale={1} />
     </motion.mesh>
