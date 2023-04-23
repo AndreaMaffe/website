@@ -10,6 +10,7 @@ import CircleMarker from './CircleMarker'
 import useCursorPositionRef from '../../hooks/useCursorPositionRef'
 import distanceBetweenPoints from '../../lib/distanceBetweenPoints'
 import generateRandomNumberInRange from '../../lib/generateRandomNumberInRange'
+import useIsMobile from '../../hooks/useIsMobile'
 
 const ROCKET_INITIAL_POSITION = [-8, -10, 0]
 
@@ -17,6 +18,7 @@ const ASTEROID_INITIAL_POSITION = [-5, -5, 0]
 const ASTEROID_DIRECTION = [generateRandomNumberInRange(-2, 2), generateRandomNumberInRange(-2, 2)]
 
 export default function SpaceCanvas() {
+  const isMobile = useIsMobile()
   const cursorPositionRef = useCursorPositionRef()
   const [hasMouseMoved, setHasMouseMoved] = useState(false)
   const [isSomethingDragged, setIsSomethingDragged] = useState(false)
@@ -32,7 +34,7 @@ export default function SpaceCanvas() {
 
   const circleMarkers = []
 
-  if (!isSomethingDragged && hasMouseMoved) {
+  if (!isSomethingDragged && hasMouseMoved && !isMobile) {
     if (distanceBetweenPoints(rocketPosition, cursorPositionRef.current) < 300) {
       circleMarkers.push(<CircleMarker key='rocket-marker' position={rocketPosition} />)
     }
