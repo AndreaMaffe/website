@@ -7,7 +7,7 @@ import Input from '../../components/Input'
 import Textarea from '../../components/Textarea'
 import { useState } from 'react'
 import Spinner from '../../components/Spinner'
-import sendEmail from './sendEmail'
+import sendEmail from '../../lib/sendEmail'
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
