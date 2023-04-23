@@ -12,7 +12,7 @@ import distanceBetweenPoints from '../../lib/distanceBetweenPoints'
 import generateRandomNumberInRange from '../../lib/generateRandomNumberInRange'
 import useIsMobile from '../../hooks/useIsMobile'
 
-const ROCKET_INITIAL_POSITION = [-8, -10, 0]
+const ROCKET_INITIAL_POSITION = [-6, -8, 0]
 
 const ASTEROID_INITIAL_POSITION = [-5, -5, 0]
 const ASTEROID_DIRECTION = [generateRandomNumberInRange(-2, 2), generateRandomNumberInRange(-2, 2)]
