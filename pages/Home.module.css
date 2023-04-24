@@ -15,7 +15,7 @@
 
 .textContainer span {
   font-family: var(--montserrat-font);
-  font-size: min(1rem, 4vw);
+  font-size: min(1rem, 3vw);
   letter-spacing: 4px;
 }
 .textContainer h1 {
