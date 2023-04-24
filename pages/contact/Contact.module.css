@@ -8,7 +8,7 @@
 }
 
 .contact > h1 {
-  font-size: min(1.125em + 2vw, 2em);
+  font-size: min(1.125em + 2vw, 1.75em);
   font-weight: 300;
   text-align: center;
 }
