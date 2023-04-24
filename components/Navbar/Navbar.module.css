@@ -1,10 +1,9 @@
 .navbar {
   position: absolute;
   top: 0;
-  height: 80px;
   width: 100%;
   background: transparent;
-  padding: 0 2em;
+  padding: min(2vw, 1rem) 2vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,12 +12,14 @@
 }
 
 .navbar > a:first-child {
-  font-family: 'BoldenVan';
+  font-family: 'var(--montserrat-font)';
   letter-spacing: 2px;
   font-size: x-large;
 }
  
 .navbar > ul {
+  padding: 0;
+  margin: 0;
   list-style: none;
   display: flex;
   gap: 20px;

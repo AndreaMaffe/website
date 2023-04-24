@@ -9,10 +9,10 @@ const links = [
   { label: 'contact', href: '/contact' }
 ]
 
-const colorsByPathname = {
-  '/': 'var(--white)',
-  '/about': 'var(--white)',
-  '/contact': 'var(--white)'
+const backgroundColorsByPathname = {
+  '/': 'transparent',
+  '/about': '#020022CC',
+  '/contact': '#020022CC'
 }
 
 function NavbarLinkItem ({ label, href, selected }) {
@@ -33,7 +33,10 @@ export default function Navbar () {
   const { pathname } = useRouter()
 
   return (
-    <nav className={styles.navbar} style={{ color: colorsByPathname[pathname] }}>
+    <nav 
+      className={styles.navbar} 
+      style={{ backgroundColor: backgroundColorsByPathname[pathname] }}
+    >
       <NavbarLinkItem label='AM' href='/' selected={pathname === '/'} />
       <ul>
         {links.map(({ label, href }) => (
