@@ -3,7 +3,7 @@
   top: 0;
   width: 100%;
   background: transparent;
-  padding: min(2vw, 1rem) 2vw;
+  padding: min(2vw, 1rem) 3vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,11 +11,13 @@
   font-family: var(--quicksand-font);
 }
 
-.navbar > a:first-child {
-  font-family: 'var(--montserrat-font)';
+.navbar a {
+  padding: 0.5em;
+  text-align: center;
   letter-spacing: 2px;
-  font-size: x-large;
+  font-size: min(0.66rem + 1vw, 1rem);
 }
+.navbar a:hover, .navbar a:focus { color: var(--yellow) }
  
 .navbar > ul {
   padding: 0;
@@ -37,11 +39,3 @@
   height: 8px;
   border-radius: 100%;
 }
-
-.navbar a {
-  padding: 0.5em;
-  width: 100px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-.navbar a:hover, .navbar a:focus { color: var(--yellow) }
