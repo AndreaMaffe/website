@@ -32,14 +32,14 @@ async function sendEmail(fromName, fromEmail, message) {
     port: GMAIL_SERVER_PORT,
     secure: true,
     auth: {
-      user: 'andreamafessoni@gmail.com',
-      pass: 'vlmpwscabzqehwxx',
+      user: process.env.EMAIL_SENDER_ADDRESS,
+      pass: process.env.EMAIL_SENDER_PASSWORD,
     },
   })
 
   await transporter.sendMail({
     from: `"${fromName}" <${fromEmail}>`,
-    to: 'andreamafessoni@gmail.com',
+    to: process.env.EMAIL_RECIPIENT_EMAIL,
     subject: `You got a new message from ${fromName} <${fromEmail}>! ⭐️`,
     text: message,
   })
