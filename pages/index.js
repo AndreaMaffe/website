@@ -12,16 +12,15 @@ export default function Home() {
   return (
     <main className={styles.home}>
       <SpaceCanvas />
-      <h1>
+      <div className={styles.textContainer}>
         <motion.div 
           key='helloiam'
           variants={variants}
           initial='bottom' 
           animate='centered'
           exit='bottom'
-          style={{ fontFamily: 'var(--montserrat-font)', fontWeight: 400, letterSpacing: '4px', fontSize: '1rem' }}
         >
-          HELLO! I AM
+          <span>HELLO! I AM</span>
         </motion.div>
         <motion.div 
           key='andreamafessoni'  
@@ -29,9 +28,8 @@ export default function Home() {
           initial='right'
           exit='right'
           animate='centered'
-          style={{ fontFamily: 'var(--montserrat-font)', fontWeight: 400, letterSpacing: '-1px', fontSize: 'calc(1.25em + 3vw)' }}
         >
-          ANDREA MAFESSONI
+          <h1>ANDREA MAFESSONI</h1>
         </motion.div>
         <motion.div 
           key='softwareengineer'
@@ -39,11 +37,10 @@ export default function Home() {
           initial='right'
           exit='right'
           animate='centered'
-          style={{ color: 'var(--yellow)', fontSize: '2rem' }}
         >
-          Software Engineer & Front-End Developer 
+          <h2>Software Engineer & Front-End Developer </h2>
         </motion.div>
-      </h1>
+      </div>
     </main>
   )
 }
