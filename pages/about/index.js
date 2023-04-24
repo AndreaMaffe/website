@@ -10,6 +10,7 @@ import styles from './About.module.css'
 import Button from '../../components/Button'
 import CursorPointLight from '../../components/SpaceCanvas/CursorPointLight'
 import useGLTF from '../../hooks/useGLTF'
+import useIsMobile from '../../hooks/useIsMobile'
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
@@ -20,7 +21,7 @@ const variants = {
 const I_ENJOY_TEXT_OPTIONS = ['telling stories', 'creating experiences']
 
 export default function About() {
-
+  const isMobile = useIsMobile()
   const changingText = useMemo(() => <ChangingText color='var(--yellow)' textOptions={I_ENJOY_TEXT_OPTIONS} />, [])
 
   return (
@@ -36,11 +37,11 @@ export default function About() {
       <section>
         <div className={styles.sectionTextContainer}>
           <h1>
-            {'I am a '} 
+            I am a
             <span style={{ background: '-webkit-linear-gradient(#FFF069, #73D836)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Software Engineer
+              {isMobile ? <><br />Software Engineer<br /></> : ' Software Engineer '}
             </span>
-            {' based in Milan, IT.'}
+            based in Milan, IT.
           </h1>
           <p>
             I work from Italy to craft beautiful experiences for people all over the world.
