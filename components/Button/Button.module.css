@@ -25,9 +25,3 @@
   width: 1em;
   height: 1em;
 }
-
-@media screen and (max-width: 768px) {
-  .button {
-    font-weight: 300;
-  }
-}
