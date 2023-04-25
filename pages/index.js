@@ -44,11 +44,16 @@ function AnimatedText() {
 }
 
 export default function Home() {
-  const [isCanvasLoaded, setIsCanvasLoaded] = useState(false)
+  const [isCanvasLoaded, setIsCanvasLoaded] = useState(true)
+
+  const onSpaceCanvasLoadProgress = progress => {
+    if (progress === 100) { setIsCanvasLoaded(true) }
+    else if (progress < 100 && isCanvasLoaded) { setIsCanvasLoaded(false) }
+  }
 
   return (
     <main className={styles.home}>
-      <SpaceCanvas onLoadFinish={() => setIsCanvasLoaded(true)}/>
+      <SpaceCanvas onLoadProgress={onSpaceCanvasLoadProgress}/>
       {isCanvasLoaded && <AnimatedText />}
     </main>
   )
