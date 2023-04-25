@@ -6,6 +6,7 @@
   border: none;
   padding: 1em 2em;
   font-family: var(--montserrat-font);
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   cursor: pointer;
@@ -23,4 +24,10 @@
 .button span svg {
   width: 1em;
   height: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    font-weight: 300;
+  }
 }
