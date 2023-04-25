@@ -6,11 +6,10 @@ export default function Progress ({ progress }) {
   return (
     <motion.div 
       key='progress'
-      initial={{ opacity: 0 }}
+      initial={{ scale: 1 }}
       animate={{ 
-        opacity: 1, 
         scale: [1, 0.8, 1],
-        transition: { repeat: Infinity }
+        transition: { duration: 1.5, repeat: Infinity }
       }}
       className={styles.progress}
     >

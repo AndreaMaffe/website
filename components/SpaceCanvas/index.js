@@ -14,8 +14,9 @@ import Progress from '../Progress'
 
 import { Html, useProgress } from '@react-three/drei'
 
-function CanvasProgress() {
+function CanvasProgress({ onFinish }) {
   const { progress } = useProgress()
+  if (progress === 100) { onFinish() }
   return <Html center><Progress progress={progress} /></Html>
 }
 
@@ -24,7 +25,7 @@ const ROCKET_INITIAL_POSITION = [-6, -8, 0]
 const ASTEROID_INITIAL_POSITION = [5, 5, 0]
 const ASTEROID_DIRECTION = [-1, -0.25, 0]
 
-export default function SpaceCanvas() {
+export default function SpaceCanvas({ onLoadFinish }) {
   const isMobile = useIsMobile()
   const cursorPositionRef = useCursorPositionRef()
   const [hasMouseMoved, setHasMouseMoved] = useState(false)
@@ -52,7 +53,7 @@ export default function SpaceCanvas() {
 
   const canvas = useMemo(() => (  
     <Canvas flat>
-      <Suspense fallback={<CanvasProgress />}>
+      <Suspense fallback={<CanvasProgress onFinish={onLoadFinish} />}>
         <CursorPointLight />
         <Earth />
         <Rocket 
