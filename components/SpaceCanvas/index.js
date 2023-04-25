@@ -2,10 +2,11 @@ import { Canvas } from '@react-three/fiber'
 import { useState, useMemo, useEffect, Suspense } from 'react'
 import { Environment } from '@react-three/drei'
 import { motion } from 'framer-motion'
-import Asteroid from './Asteroid'
 import CursorPointLight from './CursorPointLight'
 import Earth from './Earth'
+import Asteroid from './Asteroid'
 import Rocket from './Rocket'
+import Ufo from './Ufo'
 import CircleMarker from './CircleMarker'
 import useCursorPositionRef from '../../hooks/useCursorPositionRef'
 import distanceBetweenPoints from '../../lib/distanceBetweenPoints'
@@ -69,7 +70,7 @@ export default function SpaceCanvas({ onLoadProgress }) {
           onDragStart={() => setIsSomethingDragged(true)} 
           onDragEnd={() => setIsSomethingDragged(false)} 
         />
-        {/* <Ufo /> */}
+        <Ufo />
         <Environment preset="night" />
       </Suspense>
     </Canvas>
