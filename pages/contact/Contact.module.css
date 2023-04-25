@@ -5,6 +5,7 @@
   align-items: center;
   padding: max(20vh, 100px) 48px 3em;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .contact > h1 {
@@ -15,7 +16,7 @@
 
 .contact form {
   display: grid;
-  width: max(60vw, 300px);
+  width: max(60vw, 280px);
   grid-gap: 3em;
   grid-template-columns: auto auto;
 }
@@ -35,5 +36,8 @@
   }
   .contact textarea, .contact button[type=submit] {
     grid-column: 1;
+  }
+  .contact p {
+    text-align: center;
   }
 }
