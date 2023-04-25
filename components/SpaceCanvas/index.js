@@ -1,5 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, Suspense } from 'react'
 import { Environment } from '@react-three/drei'
 import { motion } from 'framer-motion'
 import Asteroid from './Asteroid'
@@ -10,6 +10,14 @@ import CircleMarker from './CircleMarker'
 import useCursorPositionRef from '../../hooks/useCursorPositionRef'
 import distanceBetweenPoints from '../../lib/distanceBetweenPoints'
 import useIsMobile from '../../hooks/useIsMobile'
+import Progress from '../Progress' 
+
+import { Html, useProgress } from '@react-three/drei'
+
+function CanvasProgress() {
+  const { progress } = useProgress()
+  return <Html center><Progress progress={progress} /></Html>
+}
 
 const ROCKET_INITIAL_POSITION = [-6, -8, 0]
 
@@ -44,23 +52,25 @@ export default function SpaceCanvas() {
 
   const canvas = useMemo(() => (  
     <Canvas flat>
-      <CursorPointLight />
-      <Earth />
-      <Rocket 
-        initialPosition={ROCKET_INITIAL_POSITION}
-        onChangePosition={setRocketPosition} 
-        onDragStart={() => setIsSomethingDragged(true)} 
-        onDragEnd={() => setIsSomethingDragged(false)} 
-      />
-      <Asteroid 
-        initialPosition={ASTEROID_INITIAL_POSITION}
-        direction={ASTEROID_DIRECTION}
-        onChangePosition={setAsteroid1Position} 
-        onDragStart={() => setIsSomethingDragged(true)} 
-        onDragEnd={() => setIsSomethingDragged(false)} 
-      />
-      {/* <Ufo /> */}
-      <Environment preset="night" />
+      <Suspense fallback={<CanvasProgress />}>
+        <CursorPointLight />
+        <Earth />
+        <Rocket 
+          initialPosition={ROCKET_INITIAL_POSITION}
+          onChangePosition={setRocketPosition} 
+          onDragStart={() => setIsSomethingDragged(true)} 
+          onDragEnd={() => setIsSomethingDragged(false)} 
+        />
+        <Asteroid 
+          initialPosition={ASTEROID_INITIAL_POSITION}
+          direction={ASTEROID_DIRECTION}
+          onChangePosition={setAsteroid1Position} 
+          onDragStart={() => setIsSomethingDragged(true)} 
+          onDragEnd={() => setIsSomethingDragged(false)} 
+        />
+        {/* <Ufo /> */}
+        <Environment preset="night" />
+      </Suspense>
     </Canvas>
   ), [])
 
