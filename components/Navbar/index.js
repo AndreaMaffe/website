@@ -1,12 +1,15 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
+import { HomeIcon, LinkedInLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icons'
 
 import styles from './Navbar.module.css'
 
 const links = [
   { label: 'about', href: '/about' },
-  { label: 'contact', href: '/contact' }
+  { label: 'contact', href: '/contact' },
+  { label: <LinkedInLogoIcon />, href: 'https://www.linkedin.com/in/andreamafessoni' },
+  { label: <GitHubLogoIcon />, href: 'https://github.com/AndreaMaffe' },
 ]
 
 const backgroundColorsByPathname = {
@@ -37,7 +40,11 @@ export default function Navbar () {
       className={styles.navbar} 
       style={{ backgroundColor: backgroundColorsByPathname[pathname] }}
     >
-      <NavbarLinkItem label='AM' href='/' selected={pathname === '/'} />
+      <NavbarLinkItem 
+        label={<HomeIcon />} 
+        href='/' 
+        selected={pathname === '/'} 
+      />
       <ul>
         {links.map(({ label, href }) => (
           <li key={href}>
