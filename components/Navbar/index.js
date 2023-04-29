@@ -8,8 +8,8 @@ import styles from './Navbar.module.css'
 const links = [
   { label: 'about', href: '/about' },
   { label: 'contact', href: '/contact' },
-  { label: <LinkedInLogoIcon />, href: 'https://www.linkedin.com/in/andreamafessoni' },
-  { label: <GitHubLogoIcon />, href: 'https://github.com/AndreaMaffe' },
+  { label: <LinkedInLogoIcon />, href: 'https://www.linkedin.com/in/andreamafessoni', target: '_blank' },
+  { label: <GitHubLogoIcon />, href: 'https://github.com/AndreaMaffe', target: '_blank' },
 ]
 
 const backgroundColorsByPathname = {
@@ -18,10 +18,13 @@ const backgroundColorsByPathname = {
   '/contact': '#020022CC'
 }
 
-function NavbarLinkItem ({ label, href, selected }) {
+function NavbarLinkItem ({ label, href, selected, target }) {
   return (
     <div className={styles.navbarLinkItem}>
-      <Link href={href}>{label}</Link>
+      {target ? 
+        <a href={href} target={target}>{label}</a> 
+        : <Link href={href}>{label}</Link>
+      }
       <motion.div 
         key={selected}
         initial={{ scale: 0 }}
@@ -46,9 +49,14 @@ export default function Navbar () {
         selected={pathname === '/'} 
       />
       <ul>
-        {links.map(({ label, href }) => (
+        {links.map(({ label, href, target }) => (
           <li key={href}>
-            <NavbarLinkItem label={label} href={href} selected={pathname === href} />
+            <NavbarLinkItem 
+              label={label}
+              target={target}
+              href={href}  
+              selected={pathname === href} 
+            />
           </li>
         ))}
       </ul>
