@@ -41,8 +41,8 @@ export default function CursorFollowerYellowSphere () {
     const RANDOM_OFFSET_X = Math.cos(time / 500) * 10
     const RANDOM_OFFSET_Y = Math.cos(time / 300) * 10
 
-    ref.current.style.left = `${cursorPositionRef.current.x + DISTANCE_FROM_CURSOR + RANDOM_OFFSET_X}px` 
-    ref.current.style.top = `${cursorPositionRef.current.y + DISTANCE_FROM_CURSOR + RANDOM_OFFSET_Y}px`
+    ref.current.style.left = cursorPositionRef.current.x ? `${cursorPositionRef.current.x + DISTANCE_FROM_CURSOR + RANDOM_OFFSET_X}px` : '-100px'
+    ref.current.style.top = cursorPositionRef.current.y ? `${cursorPositionRef.current.y + DISTANCE_FROM_CURSOR + RANDOM_OFFSET_Y}px` : '-100px'
   })
 
   return (
