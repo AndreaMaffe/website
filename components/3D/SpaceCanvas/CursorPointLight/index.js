@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import useCursorPositionRef from '../../../hooks/useCursorPositionRef'
-import useScreenTo3DConversion from '../../../hooks/useScreenTo3DConversion'
+import useCursorPositionRef from '../../../../hooks/useCursorPositionRef'
+import useScreenTo3DConversion from '../../../../hooks/useScreenTo3DConversion'
 
 export default function CursorPointLight() {
   const ref = useRef()

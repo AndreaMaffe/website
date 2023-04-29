@@ -1,8 +1,8 @@
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { motion } from 'framer-motion-3d'
-import useGLTF from '../../../hooks/useGLTF'
-import useIsMobile from '../../../hooks/useIsMobile'
+import useGLTF from '../../../../hooks/useGLTF'
+import useIsMobile from '../../../../hooks/useIsMobile'
 
 const MOBILE_POSITION = { x: 0, y: -8, z: -6 }
 const DESKTOP_POSITION = { x: -6, y: 0, z: -6 }

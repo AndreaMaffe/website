@@ -1,4 +1,4 @@
-import SpaceCanvas from '../components/SpaceCanvas'
+import SpaceCanvas from '../components/3D/SpaceCanvas'
 import { motion } from 'framer-motion'
 import styles from './Home.module.css'
 import { useState } from 'react'

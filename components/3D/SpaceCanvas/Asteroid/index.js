@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import AnimatedDraggableMesh from '../../AnimatedDraggableMesh'
-import useScreenTo3DConversion from '../../../hooks/useScreenTo3DConversion'
+import useScreenTo3DConversion from '../../../../hooks/useScreenTo3DConversion'
 
 export default function Asteroid ({
   initialPosition = [0, 0, 0],

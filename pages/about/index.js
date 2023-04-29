@@ -6,10 +6,11 @@ import { ArrowRightIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
 
 import styles from './About.module.css'
-import Rocket from './Rocket'
+import Rocket from '../../components/3D/Rocket'
+import Ufo from '../../components/3D/Ufo'
 import Button from '../../components/Button'
 import ChangingText from '../../components/ChangingText'
-import CursorPointLight from '../../components/SpaceCanvas/CursorPointLight'
+import CursorPointLight from '../../components/3D/SpaceCanvas/CursorPointLight'
 import useIsMobile from '../../hooks/useIsMobile'
 
 const I_ENJOY_TEXT_OPTIONS = [
@@ -81,7 +82,22 @@ export default function About() {
             {'I enjoy '}
             {changingText}
           </h2>
-          <p>In my spare time, I am a published novelist and a passionate Dungeon Master.  </p>
+          <p>In my spare time, I am a published novelist and a passionate Dungeon Master. Quis enim aute proident anim non cillum pariatur tempor exercitation culpa veniam minim ex elit. Enim et veniam sit ut minim consectetur adipisicing. Veniam in velit deserunt officia fugiat ipsum reprehenderit aliquip ex minim pariatur commodo occaecat est. Fugiat incididunt tempor quis cillum aliqua qui id. Ea fugiat dolor ut aliquip consequat elit magna officia.</p>
+        </div>
+      </section>
+      <section>
+        <div className={styles.sectionTextContainer}>
+          <h2>
+            I love <span style={{ color: 'var(--green)' }}>Technology</span>.
+          </h2>
+          <p>In officia culpa ipsum veniam nostrud. Lorem amet laborum tempor do mollit mollit nisi deserunt ipsum velit laborum. Voluptate ut consectetur culpa cillum cupidatat aliquip. Magna reprehenderit sunt do ut elit aute ad cillum veniam ullamco cillum in laboris. Esse sit consequat tempor labore sint.</p>
+        </div>
+        <div className={styles.rocketYellowCircle}>
+          <Canvas>
+            <Ufo />
+            <CursorPointLight />
+            <Environment preset='city' />
+          </Canvas>
         </div>
       </section>
     </motion.main>

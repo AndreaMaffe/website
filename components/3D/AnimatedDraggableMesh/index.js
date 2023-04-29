@@ -1,8 +1,8 @@
 import { useEffect, useState, forwardRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { motion } from 'framer-motion-3d'
-import useGLTF from '../../hooks/useGLTF'
-import useCursorCoordinatesRef from '../../hooks/useCursorCoordinatesRef'
+import useGLTF from '../../../hooks/useGLTF'
+import useCursorCoordinatesRef from '../../../hooks/useCursorCoordinatesRef'
 
 const AnimatedDraggableMesh = forwardRef(({
   modelName,

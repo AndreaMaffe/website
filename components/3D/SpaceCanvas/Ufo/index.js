@@ -2,10 +2,10 @@ import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Vector3 } from 'three'
 import AnimatedDraggableMesh from '../../AnimatedDraggableMesh'
-import useScreenTo3DConversion from '../../../hooks/useScreenTo3DConversion'
+import useScreenTo3DConversion from '../../../../hooks/useScreenTo3DConversion'
 
-export default function Rocket({
-  initialPosition = [0, 0, 0],
+export default function Ufo({
+  initialPosition = [-30, 5, -10],
   onChangePosition = () => {},
   onDragStart = () => {},
   onDragEnd = () => {},
@@ -19,25 +19,22 @@ export default function Rocket({
   })
 
   const whileNotDragged = delta => {
-    ref.current.position.x += delta
-    ref.current.position.y += delta
+    ref.current.position.x += delta * 2
+    ref.current.position.y += Math.cos(ref.current.position.x * 2) / 20
 
-    ref.current.rotateOnAxis(new Vector3(1, 1, 0), Math.cos(delta) / 100)
+    ref.current.rotateOnAxis(new Vector3(0, 1, 0), Math.cos(delta) / 25)
 
-    if (ref.current.position.x > 10) {
-      ref.current.position.x = -5
-    }
-    if (ref.current.position.y > 10) {
-      ref.current.position.y = -5
+    if (ref.current.position.x > 30) {
+      ref.current.position.x = -30
     }
   }
 
   return (
     <AnimatedDraggableMesh 
       ref={ref} 
-      modelName='rocket'
+      modelName='ufo'
       initialPosition={initialPosition}
-      scale={0.5}
+      scale={0.4}
       onDragStart={onDragStart}
       onDragEnd={onDragEnd}
       whileNotDragged={whileNotDragged}
