@@ -16,6 +16,6 @@ export default function useIsMobile() {
     }
   }, [])
   
-  return Boolean(width < MOBILE_BREAKPOINT) 
+  return Boolean(width <= MOBILE_BREAKPOINT) 
 }
 
