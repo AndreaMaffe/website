@@ -1,0 +1,11 @@
+.iconsCarousel {
+  display: flex;
+  overflow: hidden;
+  gap: 24px;
+  padding-top: 4px;
+  max-width: 66ch;
+}
+
+.iconsCarousel svg:hover {
+  fill: var(--white);
+}

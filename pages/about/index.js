@@ -11,7 +11,9 @@ import Ufo from '../../components/3D/Ufo'
 import Button from '../../components/Button'
 import ChangingText from '../../components/ChangingText'
 import CursorPointLight from '../../components/3D/SpaceCanvas/CursorPointLight'
+import IconsCarousel from '../../components/IconsCarousel'
 import useIsMobile from '../../hooks/useIsMobile'
+import Link from 'next/link'
 
 const I_ENJOY_TEXT_OPTIONS = [
   'telling stories', 
@@ -53,12 +55,14 @@ export default function About() {
             I am passionate about user experience, software architectures and clean design. 
             My goal is to create nice things for nice people writing simple and elegant code.
           </p>
-          <Button
-            icon={<ArrowRightIcon />}
-            type='submit'
-          >
+          <Link href='/contact'>
+            <Button
+              icon={<ArrowRightIcon />}
+              type='submit'
+            >
             Let&apos;s work together!
-          </Button>
+            </Button>
+          </Link>
         </div>
         <div className={styles.photoYellowCircle}>
           <Image 
@@ -82,7 +86,7 @@ export default function About() {
             {'I enjoy '}
             {changingText}
           </h2>
-          <p>In my spare time, I am a published novelist and a passionate Dungeon Master. Quis enim aute proident anim non cillum pariatur tempor exercitation culpa veniam minim ex elit. Enim et veniam sit ut minim consectetur adipisicing. Veniam in velit deserunt officia fugiat ipsum reprehenderit aliquip ex minim pariatur commodo occaecat est. Fugiat incididunt tempor quis cillum aliqua qui id. Ea fugiat dolor ut aliquip consequat elit magna officia.</p>
+          <p>Cillum sunt do voluptate commodo cupidatat aute consectetur do excepteur culpa in voluptate fugiat nostrud. Laborum ad pariatur pariatur in irure excepteur esse amet dolor nulla fugiat ea ullamco. Sunt adipisicing cupidatat nisi eiusmod labore consectetur veniam ea sunt veniam incididunt anim occaecat eu.</p>
         </div>
       </section>
       <section>
@@ -90,7 +94,8 @@ export default function About() {
           <h2>
             I love <span style={{ color: 'var(--green)' }}>Technology</span>.
           </h2>
-          <p>In officia culpa ipsum veniam nostrud. Lorem amet laborum tempor do mollit mollit nisi deserunt ipsum velit laborum. Voluptate ut consectetur culpa cillum cupidatat aliquip. Magna reprehenderit sunt do ut elit aute ad cillum veniam ullamco cillum in laboris. Esse sit consequat tempor labore sint.</p>
+          <p>I do my best to keep myself updated with the latest trends in the industry. I am always looking for the best tools to maximize the developer experience, in order to keep both me and my customers happy and satisfied.</p>
+          <IconsCarousel />
         </div>
         <div className={styles.rocketYellowCircle}>
           <Canvas>
@@ -103,3 +108,4 @@ export default function About() {
     </motion.main>
   )
 }
+
