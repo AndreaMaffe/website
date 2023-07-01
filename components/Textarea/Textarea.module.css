@@ -13,3 +13,10 @@
 .textarea:focus {
   border-color: var(--yellow);
 }
+
+.textarea::placeholder {
+  text-transform: uppercase;
+  font-family: var(--montserrat-font);
+  letter-spacing: 0.2em;
+  font-size: 0.8em;
+}
