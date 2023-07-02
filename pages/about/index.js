@@ -16,9 +16,12 @@ import useIsMobile from '../../hooks/useIsMobile'
 import Link from 'next/link'
 
 const I_ENJOY_TEXT_OPTIONS = [
-  'telling stories', 
-  'creating experiences',
-  'making games'
+  'creating applications',
+  'designing experiences', 
+  'dreaming big',
+  'telling stories',
+  'building worlds',
+  'sharing fantasies',
 ]
 
 const variants = {
@@ -84,9 +87,14 @@ export default function About() {
         <div className={styles.sectionTextContainer}>
           <h2>
             {'I enjoy '}
+            {isMobile && <br />}
             {changingText}
           </h2>
-          <p>Cillum sunt do voluptate commodo cupidatat aute consectetur do excepteur culpa in voluptate fugiat nostrud. Laborum ad pariatur pariatur in irure excepteur esse amet dolor nulla fugiat ea ullamco. Sunt adipisicing cupidatat nisi eiusmod labore consectetur veniam ea sunt veniam incididunt anim occaecat eu.</p>
+          <p>
+            I am a avid reader, casual novelist writer, enthustiastic Dungeon Master and constant daydreamer. 
+            My biggest fun in life is to join new projects where i can express myself by playing with
+            imagination and and bringing new ideas on the table.
+          </p>
         </div>
       </section>
       <section>
@@ -94,7 +102,10 @@ export default function About() {
           <h2>
             I love <span style={{ color: 'var(--green)' }}>Technology</span>.
           </h2>
-          <p>I do my best to keep myself updated with the latest trends in the industry. I am always looking for the best tools to maximize the developer experience, in order to keep both me and my customers happy and satisfied.</p>
+          <p>
+            I do my best to keep myself updated with the latest trends in the industry. 
+            I am always looking for the best tools to maximize the developer experience, in order to keep both me and my customers happy and satisfied.
+          </p>
           <IconsCarousel />
         </div>
         <div className={styles.rocketYellowCircle}>
