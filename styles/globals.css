@@ -56,14 +56,10 @@ p, h1, h2, h3, h4, h5, h6 { margin: unset }
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: transparent; 
+  width: 6px;
 }
 ::-webkit-scrollbar-thumb {
   border: 1px solid var(--white); 
-  background: repeating-linear-gradient(45deg, white, 2px, transparent 2px, transparent 12px);
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
