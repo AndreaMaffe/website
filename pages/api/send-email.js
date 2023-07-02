@@ -40,7 +40,7 @@ async function sendEmail(fromName, fromEmail, message) {
   await transporter.sendMail({
     from: `"${fromName}" <${fromEmail}>`,
     to: process.env.EMAIL_RECIPIENT_ADDRESS,
-    subject: `You got a new message from ${fromName} <${fromEmail}>! ⭐️`,
+    subject: `You got a new message from ${fromName}! ⭐️`,
     text: message,
   })
 }
