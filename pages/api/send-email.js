@@ -22,7 +22,7 @@ export default async function handler(req, res) {
     res.status(200).send('Email succesfully sent')
   } catch(err) {
     console.log(err)
-    res.status(500).send('An error has occurred while sending the email')
+    res.status(500).send(err)
   }
 }
 
