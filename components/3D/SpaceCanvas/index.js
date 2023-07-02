@@ -71,7 +71,7 @@ export default function SpaceCanvas({ onLoadProgress }) {
           onDragEnd={() => setIsSomethingDragged(false)} 
         />
         <Ufo />
-        <Environment preset="night" />
+        <Environment path='/static/environments/' files="night.hdr" />
       </Suspense>
     </Canvas>
   ), [])

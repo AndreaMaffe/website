@@ -78,7 +78,7 @@ export default function About() {
           <Canvas>
             <Rocket />
             <CursorPointLight />
-            <Environment preset='city' />
+            <Environment path='/static/environments/' files="night.hdr" />
           </Canvas>
         </div>
         <div className={styles.sectionTextContainer}>
@@ -101,7 +101,7 @@ export default function About() {
           <Canvas>
             <Ufo />
             <CursorPointLight />
-            <Environment preset='city' />
+            <Environment path='/static/environments/' files="sunset.hdr" />
           </Canvas>
         </div>
       </section>
