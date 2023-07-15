@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { Environment } from '@react-three/drei'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 import Image from 'next/image'
+import Head from 'next/head'
 
 import styles from './About.module.css'
 import Rocket from '../../components/3D/Rocket'
@@ -44,6 +45,13 @@ export default function About() {
       variants={variants}
       transition={{ type: 'linear', duration: 1 }}
     >
+      <Head>
+        <title>Andrea Mafessoni | About</title>
+        <meta
+          name="description"
+          content="Hi, I am Andrea Mafessoni, a Front-End engineer passionate about UX, Software Development and Clean Code."
+        />
+      </Head>
       <section>
         <div className={styles.sectionTextContainer}>
           <h1>

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { EnvelopeClosedIcon,  } from '@radix-ui/react-icons'
+import Head from 'next/head'
 
 import styles from './Contact.module.css'
 import Button from '../../components/Button'
@@ -81,6 +82,13 @@ export default function Contact() {
       variants={variants}
       transition={{ type: 'linear', duration: 1 }}
     >
+      <Head>
+        <title>Andrea Mafessoni | Contact</title>
+        <meta
+          name="description"
+          content="Hi, I am Andrea Mafessoni. I'm always keen to start new collaborations and projects!"
+        />
+      </Head>
       <h1>Let&#39;s build something <span style={{ color: 'var(--yellow)' }}>together</span>.</h1>
       {isLoading ? <Spinner size='4em' /> : form}
       {!showSuccessMessage && !showErrorMessage && <div style={{ height: '1em' }} />}

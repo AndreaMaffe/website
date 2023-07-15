@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import styles from './Home.module.css'
 import { useState } from 'react'
 import useIsMobile from '../hooks/useIsMobile'
+import Head from 'next/head'
 
 const variants = {
   centered: { x: 0, y: 0, transition: { duration: 2, ease: 'easeOut', type: 'spring', delay: 1 } },
@@ -60,6 +61,13 @@ export default function Home() {
 
   return (
     <main className={styles.home}>
+      <Head>
+        <title>Andrea Mafessoni | Software Engineer & Front-End Developer</title>
+        <meta
+          name="description"
+          content="I'm Andrea Mafessoni, a innovative Software Engineer based in Milan, IT. Browse my portfolio and contact me for collaborations and projects."
+        />
+      </Head>
       <SpaceCanvas onLoadProgress={onSpaceCanvasLoadProgress}/>
       {isCanvasLoaded && <AnimatedText />}
     </main>
