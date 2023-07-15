@@ -16,12 +16,12 @@ import useIsMobile from '../../hooks/useIsMobile'
 import Link from 'next/link'
 
 const I_ENJOY_TEXT_OPTIONS = [
-  'creating applications',
-  'designing experiences', 
+  'designing apps',
+  'creating games', 
   'dreaming big',
   'telling stories',
+  'solving problems',
   'building worlds',
-  'sharing fantasies',
 ]
 
 const variants = {
@@ -91,9 +91,9 @@ export default function About() {
             {changingText}
           </h2>
           <p>
-            I am a avid reader, casual novelist writer, enthustiastic Dungeon Master and constant daydreamer. 
+            I am a avid reader, occasional novelist writer, enthustiastic Dungeon Master and constant daydreamer.
             My biggest fun in life is to join new projects where i can express myself by playing with
-            imagination and and bringing new ideas on the table.
+            imagination and bringing new ideas on the table.
           </p>
         </div>
       </section>
