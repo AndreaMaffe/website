@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 const MOBILE_BREAKPOINT = 768
 
 export default function useIsMobile() {
-  const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0)
+  const [width, setWidth] = useState()
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth)
