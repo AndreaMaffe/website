@@ -2,6 +2,7 @@ import SpaceCanvas from '../components/3D/SpaceCanvas'
 import { motion } from 'framer-motion'
 import styles from './Home.module.css'
 import { useState } from 'react'
+import useIsMobile from '../hooks/useIsMobile'
 
 const variants = {
   centered: { x: 0, y: 0, transition: { duration: 2, ease: 'easeOut', type: 'spring', delay: 1 } },
@@ -10,6 +11,8 @@ const variants = {
 }
 
 function AnimatedText() {
+  const isMobile = useIsMobile()
+
   return (
     <div className={styles.textContainer}>
       <motion.div 
@@ -37,7 +40,11 @@ function AnimatedText() {
         exit='right'
         animate='centered'
       >
-        <h2>Software Engineer & Front-End Developer </h2>
+        <h2>
+          {'Software Engineer & '}
+          {isMobile && <br />}
+          {'Front-End Developer '}
+        </h2>
       </motion.div>
     </div>
   )
