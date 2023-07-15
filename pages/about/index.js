@@ -91,8 +91,8 @@ export default function About() {
             {changingText}
           </h2>
           <p>
-            I am a avid reader, occasional novelist writer, enthustiastic Dungeon Master and constant daydreamer.
-            My biggest fun in life is to join new projects where i can express myself by playing with
+            I am a avid reader, occasional writer, enthustiastic Dungeon Master and constant daydreamer.
+            My biggest fun in life is to join new projects where i can express myself by playing with my
             imagination and bringing new ideas on the table.
           </p>
         </div>
@@ -103,8 +103,9 @@ export default function About() {
             I love <span style={{ color: 'var(--green)' }}>Technology</span>.
           </h2>
           <p>
-            I do my best to keep myself updated with the latest trends in the industry. 
-            I am always looking for the best tools to maximize the developer experience, in order to keep both me and my customers happy and satisfied.
+            I am in love with software development and constantly following the latest trends in the industry.
+            You can often find me playing with the cutting-edge framework or programming language, 
+            always looking for the best tools to do the job.
           </p>
           <IconsCarousel />
         </div>
