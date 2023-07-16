@@ -5,11 +5,10 @@ import { useState } from 'react'
 import useIsMobile from '../hooks/useIsMobile'
 import Head from 'next/head'
 
-const variants = {
-  centered: { x: 0, y: 0, transition: { duration: 2, ease: 'easeOut', type: 'spring', delay: 1 } },
+const getVariants = ({ delay }) => ({
+  centered: { x: 0, y: 0, transition: { duration: 2, ease: 'easeOut', type: 'spring', delay } },
   right: { x: '100vw', transition: { duration: 2 } },
-  bottom: { y: '100vh',transition: { duration: 2 } },
-}
+})
 
 function AnimatedText() {
   const isMobile = useIsMobile()
@@ -18,28 +17,28 @@ function AnimatedText() {
     <div className={styles.textContainer}>
       <motion.div 
         key='helloiam'
-        variants={variants}
-        initial='bottom' 
+        variants={getVariants({ delay: 0.2 })}
+        initial='right' 
         animate='centered'
-        exit='bottom'
+        exit='right'
       >
         <span>HELLO! I AM</span>
       </motion.div>
       <motion.div 
         key='andreamafessoni'  
-        variants={variants}
+        variants={getVariants({ delay: 0.4 })}
         initial='right'
-        exit='right'
         animate='centered'
+        exit='right'
       >
         <h1>ANDREA MAFESSONI</h1>
       </motion.div>
       <motion.div 
         key='softwareengineer'
-        variants={variants}
+        variants={getVariants({ delay: 0.6 })}
         initial='right'
-        exit='right'
         animate='centered'
+        exit='right'
       >
         <h2>
           {'Software Engineer & '}
