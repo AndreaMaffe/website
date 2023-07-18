@@ -6,10 +6,10 @@ import { HomeIcon, LinkedInLogoIcon, GitHubLogoIcon } from '@radix-ui/react-icon
 import styles from './Navbar.module.css'
 
 const links = [
-  { label: 'about', href: '/about' },
-  { label: 'contact', href: '/contact' },
-  { label: <LinkedInLogoIcon />, href: 'https://www.linkedin.com/in/andreamafessoni', target: '_blank' },
-  { label: <GitHubLogoIcon />, href: 'https://github.com/AndreaMaffe', target: '_blank' },
+  { label: 'about', href: '/about', ariaLabel: 'Go to about page' },
+  { label: 'contact', href: '/contact', ariaLabel: 'Go to contact page'  },
+  { label: <LinkedInLogoIcon />, href: 'https://www.linkedin.com/in/andreamafessoni', target: '_blank', ariaLabel: 'See LinkedIn profile' },
+  { label: <GitHubLogoIcon />, href: 'https://github.com/AndreaMaffe', target: '_blank', ariaLabel: 'See GitHub profile' },
 ]
 
 const backgroundColorsByPathname = {
@@ -18,12 +18,12 @@ const backgroundColorsByPathname = {
   '/contact': '#020022CC'
 }
 
-function NavbarLinkItem ({ label, href, selected, target }) {
+function NavbarLinkItem ({ label, href, selected, target, ariaLabel }) {
   return (
     <div className={styles.navbarLinkItem}>
       {target ? 
-        <a href={href} target={target}>{label}</a> 
-        : <Link href={href}>{label}</Link>
+        <a href={href} target={target} aria-label={ariaLabel}>{label}</a> 
+        : <Link href={href} aria-label={ariaLabel}>{label}</Link>
       }
       <motion.div 
         key={selected}
@@ -45,14 +45,16 @@ export default function Navbar () {
     >
       <NavbarLinkItem 
         label={<HomeIcon />} 
+        ariaLabel='Go to Home page'
         href='/' 
         selected={pathname === '/'} 
       />
       <ul>
-        {links.map(({ label, href, target }) => (
+        {links.map(({ label, href, target, ariaLabel }) => (
           <li key={href}>
             <NavbarLinkItem 
               label={label}
+              ariaLabel={ariaLabel}
               target={target}
               href={href}  
               selected={pathname === href} 
