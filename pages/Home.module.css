@@ -27,7 +27,14 @@
 .textContainer h2 {
   color: var(--yellow);
   font-weight: 400;
-  font-size: calc(1rem + 1vw);
+  font-size: calc(0.75rem + 1vw);
+}
+
+.textContainer > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-top: 1.5em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -40,5 +47,9 @@
     margin-top: 12vh;
     text-align: center;
     grid-column: 1;
+  }
+
+  .textContainer > div:last-child {
+    justify-content: center;
   }
 }

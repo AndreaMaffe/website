@@ -4,6 +4,9 @@ import styles from './Home.module.css'
 import { useState } from 'react'
 import useIsMobile from '../hooks/useIsMobile'
 import Head from 'next/head'
+import Button from '../components/Button'
+import Link from 'next/link'
+import { ArrowRightIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons'
 
 const getVariants = ({ delay }) => ({
   centered: { x: 0, y: 0, transition: { duration: 2, ease: 'easeOut', type: 'spring', delay } },
@@ -26,7 +29,7 @@ function AnimatedText() {
       </motion.div>
       <motion.div 
         key='andreamafessoni'  
-        variants={getVariants({ delay: 0.4 })}
+        variants={getVariants({ delay: 0.5 })}
         initial='right'
         animate='centered'
         exit='right'
@@ -35,16 +38,26 @@ function AnimatedText() {
       </motion.div>
       <motion.div 
         key='softwareengineer'
-        variants={getVariants({ delay: 0.6 })}
+        variants={getVariants({ delay: 0.7 })}
         initial='right'
         animate='centered'
         exit='right'
       >
-        <h2>
-          {'Software Engineer & '}
-          {isMobile && <br />}
-          {'Front-End Developer '}
-        </h2>
+        <h2>Software Engineer & Front-End developer</h2>
+      </motion.div>
+      <motion.div
+        key='ctas'
+        variants={getVariants({ delay: 1 })}
+        initial='right'
+        animate='centered'
+        exit='right'
+      >
+        <Link href='/contact'>
+          <Button icon={<EnvelopeClosedIcon />}>{isMobile ? 'Contact' : 'Contact me'}</Button>
+        </Link>
+        <Link href='/about'>
+          <Button icon={<ArrowRightIcon />} secondary>{isMobile ? 'More' : 'Find out more'}</Button>
+        </Link>
       </motion.div>
     </div>
   )

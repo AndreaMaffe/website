@@ -1,15 +1,29 @@
 .button {
   display: flex;
   align-items: center;
-  background-color: var(--yellow);
-  color: var(--dark-blue);
-  border: none;
   padding: 1em 2em;
   font-family: var(--montserrat-font);
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   cursor: pointer;
+}
+
+.primary {
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+  border: 1px solid var(--yellow);
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+}
+.secondary:hover {
+  background-color: var(--yellow);
+  color: var(--dark-blue);
+  transition: 0.5s;
 }
 
 .button:active {

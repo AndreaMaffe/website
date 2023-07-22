@@ -3,7 +3,14 @@ import styles from './Button.module.css'
 import { useState } from 'react'
 
 export default function Button (props) {
-  return props.icon ? <ButtonWithIcon {...props} /> : <ButtonWithoutIcon {...props} />
+  const buttonTypeClass = props.secondary ? styles.secondary : styles.primary
+
+  const commonProps = {
+    ...props,
+    className: `${styles.button} ${buttonTypeClass}`
+  }
+
+  return props.icon ? <ButtonWithIcon {...commonProps} /> : <ButtonWithoutIcon {...commonProps} />
 }
 
 function ButtonWithIcon (props) {
@@ -11,7 +18,6 @@ function ButtonWithIcon (props) {
 
   return (
     <button 
-      className={styles.button}
       onMouseEnter={() => setShowIcon(true)}
       onMouseLeave={() => setShowIcon(false)}
       onFocus={() => setShowIcon(true)}
@@ -36,10 +42,7 @@ function ButtonWithIcon (props) {
 
 function ButtonWithoutIcon (props) {
   return (
-    <button 
-      className={styles.button}
-      {...props}
-    >
+    <button {...props}>
       {props.children}
     </button>
   )
