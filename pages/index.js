@@ -64,7 +64,7 @@ export default function Home() {
         <title>Andrea Mafessoni | Software Engineer & Front-End Developer</title>
         <meta
           name="description"
-          content="I'm Andrea Mafessoni, a innovative Software Engineer based in Milan, IT. Browse my portfolio and contact me for collaborations and projects."
+          content="I'm Andrea Mafessoni, a innovative Software Engineer based in Milan, IT. Browse my work and contact me for collaborations and projects."
         />
       </Head>
       <SpaceCanvas onLoadProgress={onSpaceCanvasLoadProgress}/>
