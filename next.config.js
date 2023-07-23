@@ -5,6 +5,9 @@ const nextConfig = {
     defaultLocale: 'en',
   },
   reactStrictMode: false,
+  compiler: {
+    styledComponents: true,
+  },
 }
 
 module.exports = nextConfig
