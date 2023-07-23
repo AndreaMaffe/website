@@ -18,11 +18,12 @@ function ButtonWithIcon (props) {
 
   return (
     <button 
+      {...props}
       onMouseEnter={() => setShowIcon(true)}
       onMouseLeave={() => setShowIcon(false)}
       onFocus={() => setShowIcon(true)}
       onBlur={() => setShowIcon(false)}
-      {...props}
+      secondary={undefined}
     >
       {props.children}
       <AnimatePresence>
