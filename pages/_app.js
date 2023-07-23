@@ -1,17 +1,22 @@
+import { useEffect } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { Montserrat, Quicksand } from '@next/font/google'
-
-import '../styles/globals.css'
-import '../styles/variables.css'
 
 import CursorFollowerYellowSphere from '../components/CursorFollowerYellowSphere'
 import Navbar from '../components/Navbar'
 import useNextCssRemovalPrevention from '../hooks/useNextCssRemovalPrevention'
 
+import '../styles/globals.css'
+import '../styles/variables.css'
+
 const montserrat = Montserrat({ subsets: ['latin'] })
 const quicksand = Quicksand({ subsets: ['latin'] })
 
 export default function MyApp({ Component, pageProps, router }) {
+
+  useEffect(() => {
+    console.log('%c🌍 Hello, I am Andrea! Welcome on my website! 🚀', 'background-color:#020022; color: #FFF069; font-size: larger; padding: 1em')
+  }, [])
 
   // necessary to fix this issue: https://github.com/vercel/next.js/issues/17464
   useNextCssRemovalPrevention()
